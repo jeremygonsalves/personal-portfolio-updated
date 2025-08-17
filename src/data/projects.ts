@@ -1,13 +1,15 @@
 export const projectsList = [
   {
-    title: "Stock Price Prediction Model",
-    description: "Advanced machine learning model integrating Reddit sentiment analysis, financial data from multiple sources, and news sentiment to predict stock price movements",
+    title: "Real-Time Stock Price Predictor with Slack Integration",
+    description: "Sophisticated real-time stock prediction system providing buy/sell recommendations at 12pm daily, featuring LSTM neural networks, sentiment analysis, and automated Slack alerts",
     detailedDescription: [
-      "Developed a comprehensive stock price prediction system that combines data from Reddit API, Yahoo Finance, Alpha Vantage, and Yahoo News to analyze market sentiment and predict stock price movements.",
-      "Implemented natural language processing techniques to analyze Reddit posts and news articles for sentiment analysis, correlating social media trends with market movements.",
-      "Created a pipeline that aggregates financial data from multiple sources, processes technical indicators, and combines them with sentiment analysis for more accurate predictions."
+      "Built a comprehensive real-time stock prediction system that provides buy/sell recommendations at 12pm daily based on 4-hour price predictions using config-driven ensemble methods with LSTM neural networks.",
+      "Implemented advanced sentiment analysis integrating Reddit and news sources with 20+ technical indicators including RSI, MACD, Bollinger Bands, and volume analysis for enhanced prediction accuracy.",
+      "Developed automated Slack integration for real-time alerts and morning stock analysis reports, featuring config-driven architecture where all weights and metrics are inherited from config.json for easy tuning.",
+      "Created robust error handling with multiple fallback methods for reliable price data, automatic currency detection, and comprehensive logging system with alert history tracking.",
+      "Built morning stock analysis feature that runs at 8:30 AM weekdays, analyzing news from multiple sources to identify top stocks to watch with sentiment scoring and engagement metrics."
     ],
-    tags: ["Python", "Machine Learning", "NLP", "API Integration", "Financial Analysis", "Sentiment Analysis"],
+    tags: ["Python", "LSTM Neural Networks", "Machine Learning", "Slack API", "Reddit API", "Sentiment Analysis", "Technical Indicators", "Real-time Alerts", "Config-driven Architecture", "Financial Analysis"],
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     github: "https://github.com/jeremygonsalves/price-predictor-stocks"
   },
