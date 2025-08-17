@@ -50,11 +50,13 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => {
             const isStockPredictor = project.title.includes("Stock Price Predictor");
+            const isNHLDraft = project.title.includes("NHL Draft");
             return (
               <div 
                 key={index}
                 className={`group bg-black/50 backdrop-blur-sm rounded-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 shadow-xl ${
-                  isStockPredictor ? 'ring-2 ring-green-500/50 hover:ring-green-400/70' : ''
+                  isStockPredictor ? 'ring-2 ring-green-500/50 hover:ring-green-400/70' : 
+                  isNHLDraft ? 'ring-2 ring-blue-500/50 hover:ring-blue-400/70' : ''
                 }`}
               >
                 {/* Project Image */}
@@ -72,6 +74,14 @@ const Projects = () => {
                       </span>
                     </div>
                   )}
+                  {isNHLDraft && (
+                    <div className="absolute top-3 left-3 flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                      <span className="text-blue-400 text-xs font-medium bg-black/50 px-2 py-1 rounded-full">
+                        85%
+                      </span>
+                    </div>
+                  )}
                 </div>
                 
                 {/* Project Info */}
@@ -84,13 +94,7 @@ const Projects = () => {
                     {project.tags.slice(0, 3).map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className={`px-2 py-1 text-xs rounded-full border ${
-                          isStockPredictor && tag.includes("LSTM") 
-                            ? 'bg-purple-900/20 text-purple-400 border-purple-900/30' 
-                            : isStockPredictor && tag.includes("Slack")
-                            ? 'bg-green-900/20 text-green-400 border-green-900/30'
-                            : 'bg-blue-900/20 text-blue-400 border-blue-900/30'
-                        }`}
+                        className="px-2 py-1 text-xs rounded-full bg-blue-900/20 text-blue-400 border border-blue-900/30"
                       >
                         {tag}
                       </span>

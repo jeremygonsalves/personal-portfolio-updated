@@ -29,6 +29,7 @@ const ProjectDetail = () => {
 
   // Special styling for the stock price predictor project
   const isStockPredictor = project.title.includes("Stock Price Predictor");
+  const isNHLDraft = project.title.includes("NHL Draft");
 
   return (
     <div className="relative min-h-screen">
@@ -64,10 +65,22 @@ const ProjectDetail = () => {
                 </div>
               </div>
             )}
+            {isNHLDraft && (
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end">
+                <div className="p-6 w-full">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                    <span className="text-blue-400 text-sm font-medium">85% ACCURACY</span>
+                  </div>
+                  <h1 className="text-4xl font-bold text-white mb-2">{project.title}</h1>
+                  <p className="text-blue-300 text-lg">Advanced NLP-powered draft prediction with multi-model ensemble</p>
+                </div>
+              </div>
+            )}
           </div>
           
           <div className="p-6 md:p-8">
-            {!isStockPredictor && (
+            {!isStockPredictor && !isNHLDraft && (
               <h1 className="text-3xl font-bold mb-4 text-white">{project.title}</h1>
             )}
             
@@ -82,7 +95,7 @@ const ProjectDetail = () => {
               ))}
             </div>
 
-            {!isStockPredictor && (
+            {!isStockPredictor && !isNHLDraft && (
               <p className="text-white mb-8 text-lg">{project.description}</p>
             )}
             
@@ -160,6 +173,80 @@ const ProjectDetail = () => {
                 </div>
               </div>
             )}
+            {isNHLDraft && (
+              <div className="mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                  <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-4 rounded-lg border border-blue-500/30">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <Brain className="w-5 h-5 text-blue-400" />
+                      <span className="text-blue-400 font-medium">Multi-Model Ensemble</span>
+                    </div>
+                    <p className="text-white text-sm">Logistic Regression, Random Forest, SVM, Neural Networks</p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-green-900/30 to-blue-900/30 p-4 rounded-lg border border-green-500/30">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <MessageSquare className="w-5 h-5 text-green-400" />
+                      <span className="text-green-400 font-medium">Advanced NLP</span>
+                    </div>
+                    <p className="text-white text-sm">BERT and Word2Vec embeddings for scouting reports</p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 p-4 rounded-lg border border-purple-500/30">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <BarChart3 className="w-5 h-5 text-purple-400" />
+                      <span className="text-purple-400 font-medium">85% Accuracy</span>
+                    </div>
+                    <p className="text-white text-sm">High-performance ordinal classification</p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-orange-900/30 to-red-900/30 p-4 rounded-lg border border-orange-500/30">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <Settings className="w-5 h-5 text-orange-400" />
+                      <span className="text-orange-400 font-medium">Production-Ready</span>
+                    </div>
+                    <p className="text-white text-sm">Modular, tested, and well-documented codebase</p>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-6 rounded-lg border border-blue-500/30 mb-6">
+                  <h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                    <Zap className="w-6 h-6 text-yellow-400 mr-2" />
+                    Key Features
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <Clock className="w-5 h-5 text-blue-400" />
+                        <span className="text-white">200+ prospects analyzed for 2023 draft</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <TrendingUp className="w-5 h-5 text-green-400" />
+                        <span className="text-white">7 major scouting services integrated</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <AlertTriangle className="w-5 h-5 text-yellow-400" />
+                        <span className="text-white">Comprehensive EDA and visualization</span>
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <MessageSquare className="w-5 h-5 text-purple-400" />
+                        <span className="text-white">Ordinal classification handling</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <BarChart3 className="w-5 h-5 text-orange-400" />
+                        <span className="text-white">Automated data preprocessing pipelines</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <Settings className="w-5 h-5 text-cyan-400" />
+                        <span className="text-white">Robust feature engineering</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
             
             {project.detailedDescription && (
               <div className="space-y-4 mb-8">
@@ -187,6 +274,12 @@ const ProjectDetail = () => {
                 <div className="inline-flex items-center space-x-2 px-6 py-3 bg-green-900/30 border border-green-500/30 rounded-lg text-green-400 font-medium">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                   <span>Active Development</span>
+                </div>
+              )}
+              {isNHLDraft && (
+                <div className="inline-flex items-center space-x-2 px-6 py-3 bg-blue-900/30 border border-blue-500/30 rounded-lg text-blue-400 font-medium">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                  <span>Research Project</span>
                 </div>
               )}
             </div>
