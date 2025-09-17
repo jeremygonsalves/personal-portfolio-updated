@@ -86,7 +86,7 @@ const Home = () => {
                 </span>
               </a>
               <a 
-                href="https://drive.google.com/file/d/1LpvAb1La2BRrClkb7Kq45kn0qBshsUni/view?usp=sharing" 
+                href="https://docs.google.com/document/d/1fKOhy8o-gwWtrIlvbLbSiBycjc8ezfz9/edit?usp=sharing&ouid=106194094018121644660&rtpof=true&sd=true" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="group relative text-white hover:text-blue-500 transition-colors"
