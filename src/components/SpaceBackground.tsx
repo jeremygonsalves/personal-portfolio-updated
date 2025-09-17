@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { createNoise3D } from 'simplex-noise';
 
 const SpaceBackground: React.FC = () => {
@@ -226,7 +226,7 @@ const SpaceBackground: React.FC = () => {
 
   return (
     <>
-nt t      <div 
+      <div 
         ref={containerRef} 
         className="fixed inset-0 w-full h-full z-0" 
         style={{ 
@@ -235,7 +235,7 @@ nt t      <div
           left: 0,
           width: '100vw',
           height: '100vh',
-          zIndex: -1
+          zIndex: 0
         }}
       />
       <button

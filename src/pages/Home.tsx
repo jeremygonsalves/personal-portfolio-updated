@@ -10,10 +10,10 @@ const Home = () => {
   ];
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-transparent">
       <SpaceBackground />
       
-      <div className="relative z-10">
+      <div className="relative z-20">
         <div className="min-h-screen flex flex-col justify-center items-center px-4 text-white">
           <div className="max-w-4xl w-full text-center space-y-6 px-4">
             <div className="mb-8">
