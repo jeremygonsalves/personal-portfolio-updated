@@ -1,5 +1,4 @@
 import SpaceBackground from '../components/SpaceBackground';
-import TechStack from '../components/TechStack';
 import DailyStoicQuote from '../components/DailyStoicQuote';
 import { Mail, Github, Linkedin, FileText, Database, BarChart2, LineChart, Download, Award, Briefcase, GraduationCap } from 'lucide-react';
 
@@ -99,10 +98,8 @@ const Home = () => {
           </div>
         </div>
 
-        <TechStack />
-
         {/* Timeline Section */}
-        <div className="py-16 bg-black/30 backdrop-blur-sm">
+        <div className="py-16 bg-transparent">
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-12">My Journey</h2>
             

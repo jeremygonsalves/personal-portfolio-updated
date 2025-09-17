@@ -151,12 +151,14 @@
 .flag {
   position: relative;
   display: inline;
-  background: rgb(248,248,248);
+  background: rgba(255,255,255,0.95);
   padding: 6px 10px;
   border-radius: 5px;
   font-weight: 600;
   text-align: left;
-  color: rgb(50,50,50);
+  color: rgb(30,30,30);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
 }
 
 .direction-l .flag {
@@ -234,8 +236,10 @@
 .time {
   display: inline-block;
   padding: 4px 6px;
-  background: rgb(248,248,248);
-  color: rgb(50,50,50);
+  background: rgba(255,255,255,0.9);
+  color: rgb(30,30,30);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
 }
 
 .desc {
@@ -243,7 +247,13 @@
   font-size: 0.77777em;
   font-style: italic;
   line-height: 1.5em;
-  color: rgb(200,200,200);
+  color: rgb(255,255,255);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.3);
+  padding: 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .direction-r .desc {
@@ -279,8 +289,10 @@
   }
 
   .flag {
-    background: rgb(255,255,255);
+    background: rgba(255,255,255,0.95);
     z-index: 15;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
   }
 
   .direction-l .flag:before,
@@ -333,10 +345,14 @@
     position: relative;
     margin: 1em 0 0 0;
     padding: 1em;
-    background: rgba(245,245,245,0.1);
+    background: rgba(0,0,0,0.3);
     border-radius: 8px;
     box-shadow: 0 0 1px rgba(0,0,0,0.20);
     z-index: 15;
+    color: rgb(255,255,255);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
   }
 
   .direction-l .desc,
