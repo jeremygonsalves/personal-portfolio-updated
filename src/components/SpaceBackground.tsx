@@ -226,11 +226,22 @@ const SpaceBackground: React.FC = () => {
 
   return (
     <>
-      <div ref={containerRef} className="w-full h-screen" />
+      <div 
+        ref={containerRef} 
+        className="fixed inset-0 w-full h-full z-0" 
+        style={{ 
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          zIndex: -1
+        }}
+      />
       <button
         ref={fullscreenRef}
         onClick={handleFullscreen}
-        className="absolute bottom-8 right-8 border border-white rounded px-4 py-2 text-[#F9B31C] font-bold uppercase transition-all hover:bg-white hover:text-[#2a2b2f] z-50"
+        className="fixed bottom-8 right-8 border border-white rounded px-4 py-2 text-[#F9B31C] font-bold uppercase transition-all hover:bg-white hover:text-[#2a2b2f] z-50"
       >
         Go Fullscreen
       </button>

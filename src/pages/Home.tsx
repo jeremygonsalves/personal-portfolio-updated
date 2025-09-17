@@ -13,7 +13,7 @@ const Home = () => {
     <div className="relative min-h-screen">
       <SpaceBackground />
       
-      <div className="absolute inset-0 z-10">
+      <div className="relative z-10">
         <div className="min-h-screen flex flex-col justify-center items-center px-4 text-white">
           <div className="max-w-4xl w-full text-center space-y-6 px-4">
             <div className="mb-8">
@@ -99,7 +99,7 @@ const Home = () => {
         </div>
 
         {/* Timeline Section */}
-        <div className="py-16 bg-transparent">
+        <div className="py-16 bg-transparent relative z-10">
           <div className="container mx-auto px-4 max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-12">My Journey</h2>
             
@@ -199,7 +199,7 @@ const Home = () => {
         </div>
 
         {/* Resume Preview Section */}
-        <div className="py-16 bg-gradient-to-b from-black/20 to-black/40 backdrop-blur-sm">
+        <div className="py-16 bg-gradient-to-b from-black/20 to-black/40 backdrop-blur-sm relative z-10">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">Resume Preview</h2>
             
@@ -332,7 +332,9 @@ const Home = () => {
           </div>
         </div>
 
-        <DailyStoicQuote />
+        <div className="relative z-10">
+          <DailyStoicQuote />
+        </div>
       </div>
     </div>
   );
