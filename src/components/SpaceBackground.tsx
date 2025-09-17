@@ -226,7 +226,7 @@ const SpaceBackground: React.FC = () => {
 
   return (
     <>
-      <div 
+nt t      <div 
         ref={containerRef} 
         className="fixed inset-0 w-full h-full z-0" 
         style={{ 

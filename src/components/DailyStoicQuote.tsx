@@ -63,7 +63,7 @@ const DailyStoicQuote = () => {
   };
 
   return (
-    <div className="py-16 bg-black/30 backdrop-blur-sm mt-16">
+    <div className="py-16 bg-transparent mt-16">
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="flex flex-col items-center text-center">
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
@@ -71,7 +71,7 @@ const DailyStoicQuote = () => {
             Daily Stoic Wisdom
           </h2>
           
-          <div className="bg-black/20 backdrop-blur-sm p-8 rounded-lg border border-blue-800/30 mb-8 max-w-2xl">
+          <div className="bg-black/10 backdrop-blur-sm p-8 rounded-lg border border-blue-800/30 mb-8 max-w-2xl">
             <blockquote className="text-xl md:text-2xl text-white mb-4 italic min-h-[80px]">
               "{quote.text}"
             </blockquote>

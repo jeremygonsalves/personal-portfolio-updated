@@ -179,7 +179,7 @@ const Home = () => {
                       Continuous Learner and Problem Solver, Teaching and Training Skills, Entrepreneurial Mindset, Analytical Thinker, Presentation Preparation, Data Visualization, Financial Modelling, Interpersonal Skills, and Leadership.
                     </div>
                   </div>
-                </li>
+                  </li>
 
                 {/* Personal Interests */}
                 <li>
@@ -192,19 +192,19 @@ const Home = () => {
                       Triathlete focusing on Fitness and Wellness, Language Learner (Spanish, Dutch, Italian). Passionate about continuous growth both professionally and personally.
                     </div>
                   </div>
-                </li>
-              </ul>
+                  </li>
+                </ul>
             </div>
           </div>
         </div>
 
         {/* Resume Preview Section */}
-        <div className="py-16 bg-gradient-to-b from-black/20 to-black/40 backdrop-blur-sm relative z-10">
+        <div className="py-16 bg-transparent relative z-10">
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">Resume Preview</h2>
             
             {/* Embedded Google Docs Resume */}
-            <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-2xl p-4 md:p-8 max-w-5xl mx-auto mb-8">
+            <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-2xl p-4 md:p-8 max-w-5xl mx-auto mb-8">
               <div className="aspect-[8.5/11] w-full">
                 <iframe
                   src="https://docs.google.com/document/d/1fKOhy8o-gwWtrIlvbLbSiBycjc8ezfz9/edit?usp=sharing&ouid=106194094018121644660&rtpof=true&sd=true&embedded=true"
@@ -218,7 +218,7 @@ const Home = () => {
             {/* Resume Summary Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {/* Contact Info Card */}
-              <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl p-6">
+              <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
                   <Mail className="w-5 h-5 mr-2 text-blue-600" />
                   Contact Information
@@ -233,7 +233,7 @@ const Home = () => {
               </div>
 
               {/* Current Role Card */}
-              <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl p-6">
+              <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
                   <Briefcase className="w-5 h-5 mr-2 text-blue-600" />
                   Current Role
@@ -250,7 +250,7 @@ const Home = () => {
               </div>
 
               {/* Education Card */}
-              <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl p-6">
+              <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
                   <GraduationCap className="w-5 h-5 mr-2 text-blue-600" />
                   Education
@@ -265,7 +265,7 @@ const Home = () => {
               </div>
 
               {/* Key Skills Card */}
-              <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl p-6">
+              <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
                   <Database className="w-5 h-5 mr-2 text-blue-600" />
                   Key Skills
@@ -280,7 +280,7 @@ const Home = () => {
               </div>
 
               {/* Notable Projects Card */}
-              <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl p-6">
+              <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
                   <Award className="w-5 h-5 mr-2 text-blue-600" />
                   Notable Projects
@@ -302,7 +302,7 @@ const Home = () => {
               </div>
 
               {/* Achievements Card */}
-              <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl p-6">
+              <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
                   <Award className="w-5 h-5 mr-2 text-blue-600" />
                   Key Achievements
@@ -333,7 +333,7 @@ const Home = () => {
         </div>
 
         <div className="relative z-10">
-          <DailyStoicQuote />
+        <DailyStoicQuote />
         </div>
       </div>
     </div>
