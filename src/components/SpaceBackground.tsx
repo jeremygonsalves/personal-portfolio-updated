@@ -178,7 +178,7 @@ const SpaceBackground: React.FC = () => {
       <button
         ref={fullscreenRef}
         onClick={handleFullscreen}
-        className="fixed bottom-8 right-8 border border-white rounded px-4 py-2 text-[#F9B31C] font-bold uppercase transition-all hover:bg-white hover:text-[#2a2b2f] z-50"
+        className="fixed bottom-8 right-8 px-4 py-2 bg-black/20 backdrop-blur-sm border border-white/30 rounded-lg text-white font-bold uppercase transition-all duration-300 hover:bg-blue-600/40 hover:border-blue-400 hover:shadow-md z-50"
       >
         Go Fullscreen
       </button>
