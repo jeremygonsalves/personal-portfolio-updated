@@ -9,7 +9,7 @@ export const projectsList = [
       "Created robust error handling with multiple fallback methods for reliable price data, automatic currency detection, and comprehensive logging system with alert history tracking.",
       "Built morning stock analysis feature that runs at 8:30 AM weekdays, analyzing news from multiple sources to identify top stocks to watch with sentiment scoring and engagement metrics."
     ],
-    tags: ["Python", "Machine Learning", "Deep Learning", "Neural Networks", "Data Analysis"],
+    tags: ["Python", "Machine Learning", "Deep Learning", "Neural Networks", "Data Science"],
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     github: "https://github.com/jeremygonsalves/price-predictor-stocks"
   },
@@ -23,7 +23,7 @@ export const projectsList = [
       "Created an end-to-end solution that processes raw scouting data, generates text embeddings, combines physical attributes with NLP features, and provides interpretable model predictions with detailed performance metrics.",
       "Established a scalable architecture with configurable model parameters, comprehensive documentation, and automated testing suites, enabling easy model comparison and deployment for future draft predictions."
     ],
-    tags: ["Python", "Machine Learning", "NLP", "Deep Learning", "Data Analysis"],
+    tags: ["Python", "Machine Learning", "NLP", "Deep Learning", "Data Science"],
     image: "https://i0.wp.com/www.recruitscouting.com/wp-content/uploads/2021/07/mockdraft1.jpg?w=960&ssl=1",
     github: "https://github.com/jeremygonsalves/PredictingDraftNHL"
   },
@@ -34,7 +34,7 @@ export const projectsList = [
       "Reduced categorization time by 80% by developing a transaction categorization system using Python and machine learning (Random Forest and SVM), achieving 95% accuracy on over 3,000 transactions and improving financial tracking efficiency.",
       "Built an interactive dashboard in Excel to visualize categorized spending across multiple categories, enabling data-driven insights into personal financial management, reducing unnecessary costs and saving 20% of personal budget."
     ],
-    tags: ["Python", "Machine Learning", "Data Analysis", "SQL"],
+    tags: ["Python", "Machine Learning", "Data Science", "SQL"],
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     github: "https://github.com/jeremygonsalves/Financing"
   },
@@ -57,7 +57,7 @@ export const projectsList = [
       "Developed sophisticated Python scripts to manipulate, preprocess, and analyze large datasets, leveraging PySpark to efficiently process and handle large-scale data, significantly speeding up the analysis.",
       "Reduced patient testing time by 90% by applying statistical methods to uncover significant patterns and relationships, including Chi-squared tests, correlation heat maps, and T-tests."
     ],
-    tags: ["Python", "Data Analysis", "Statistical Analysis", "Research"],
+    tags: ["Python", "Data Science", "Statistical Analysis", "Research"],
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     github: "https://github.com/jeremygonsalves/Dementia_Research"
   },

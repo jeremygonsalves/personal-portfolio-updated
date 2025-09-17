@@ -5,7 +5,7 @@ import { Mail, Github, Linkedin, FileText, Database, BarChart2, LineChart, Downl
 
 const Home = () => {
   const skills = [
-    { icon: <Database className="w-8 h-8" />, name: "Data Analysis", description: "Expert in SQL & Python" },
+    { icon: <Database className="w-8 h-8" />, name: "Data Science", description: "Expert in SQL & Python" },
     { icon: <BarChart2 className="w-8 h-8" />, name: "Business Intelligence", description: "Dashboard Design" },
     { icon: <LineChart className="w-8 h-8" />, name: "Machine Learning", description: "Predictive Analytics" }
   ];
@@ -29,12 +29,12 @@ const Home = () => {
                 Jeremy Gonsalves
               </h1>
               <h2 className="text-xl md:text-3xl text-blue-500">
-                Data Analytics & Business Intelligence
+                Data Science & Business Intelligence
               </h2>
             </div>
             
             <p className="text-lg md:text-2xl text-white">
-              Bilingual Data Analyst | Python Expert | SQL Specialist
+              Bilingual Data Scientist | Python Expert | SQL Specialist
             </p>
 
             <div className="flex flex-col md:flex-row justify-center md:space-x-8 space-y-4 md:space-y-0 mt-12">
