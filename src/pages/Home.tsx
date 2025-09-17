@@ -1,7 +1,7 @@
 import SpaceBackground from '../components/SpaceBackground';
 import TechStack from '../components/TechStack';
 import DailyStoicQuote from '../components/DailyStoicQuote';
-import { Mail, Github, Linkedin, FileText, Database, BarChart2, LineChart, Download, MapPin, Award, Briefcase, GraduationCap, Languages } from 'lucide-react';
+import { Mail, Github, Linkedin, FileText, Database, BarChart2, LineChart, Download, Award, Briefcase, GraduationCap } from 'lucide-react';
 
 const Home = () => {
   const skills = [
@@ -54,7 +54,7 @@ const Home = () => {
 
             <div className="mt-12 flex justify-center space-x-6">
               <a 
-                href="mailto:jeremygonsalves98@outlook.com" 
+                href="mailto:jeremygonsalves98@gmail.com" 
                 className="group relative text-white hover:text-blue-500 transition-colors"
               >
                 <Mail className="w-6 h-6 md:w-8 md:h-8" />
@@ -107,7 +107,7 @@ const Home = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-8">About Me</h2>
             <div className="space-y-6">
               <p className="text-base md:text-lg leading-relaxed text-white">
-                Bilingual (French and English) data analyst with over 1 year of experience in data-driven roles focused on analytics, process optimization, and scalable data solutions. Skilled in SQL, Python, and A/B testing methodologies to inform decisions and drive user engagement, growth, and profitability. Experienced in designing intuitive dashboards, developing analytics workflows, and fostering data-driven organizational cultures. Adept at addressing ambiguous problems, formulating actionable hypotheses, and collaborating cross-functionally with technical and non-technical teams. Eager to work in dynamic environments, combining creativity, critical thinking, and a passion for redefining the financial industry with customer-focused solutions.
+                Bilingual Data Scientist with expertise in Python, SQL, and cloud-based deployments, specializing in statistical analysis, predictive modeling, and machine learning integration. Skilled in building and validating ML models with scikit-learn and PyTorch, applying advanced techniques to solve business problems and deliver actionable insights. Experienced in designing scalable ETL pipelines, automating data workflows, and integrating models with APIs and databases to support decision-making across teams. Adept at data visualization and dashboarding with tools like Power BI, ensuring stakeholders receive clear, reliable insights.
               </p>
               
               <p className="text-base md:text-lg leading-relaxed text-white">
@@ -134,132 +134,131 @@ const Home = () => {
           <div className="container mx-auto px-4 max-w-6xl">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">Resume Preview</h2>
             
-            <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-2xl p-8 md:p-12 max-w-4xl mx-auto">
-              {/* Header */}
-              <div className="text-center mb-8 border-b-2 border-gray-200 pb-6">
-                <h1 className="text-3xl font-bold text-gray-800 mb-2">Jeremy Gonsalves</h1>
-                <p className="text-xl text-blue-600 font-semibold mb-4">Data Analytics & Business Intelligence</p>
-                <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
-                  <div className="flex items-center gap-1">
-                    <Mail className="w-4 h-4" />
-                    <span>jeremygonsalves98@outlook.com</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <MapPin className="w-4 h-4" />
-                    <span>Toronto, ON</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Languages className="w-4 h-4" />
-                    <span>Bilingual (French & English)</span>
-                  </div>
+            {/* Embedded Google Docs Resume */}
+            <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-2xl p-4 md:p-8 max-w-5xl mx-auto mb-8">
+              <div className="aspect-[8.5/11] w-full">
+                <iframe
+                  src="https://docs.google.com/document/d/1fKOhy8o-gwWtrIlvbLbSiBycjc8ezfz9/edit?usp=sharing&ouid=106194094018121644660&rtpof=true&sd=true&embedded=true"
+                  className="w-full h-full rounded-lg border-0"
+                  title="Jeremy Gonsalves Resume"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            {/* Resume Summary Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {/* Contact Info Card */}
+              <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                  <Mail className="w-5 h-5 mr-2 text-blue-600" />
+                  Contact Information
+                </h3>
+                <div className="space-y-2 text-gray-700">
+                  <p><strong>Email:</strong> jeremygonsalves98@gmail.com</p>
+                  <p><strong>Phone:</strong> 647-229-2249</p>
+                  <p><strong>LinkedIn:</strong> linkedin.com/in/jeremy-gonsalves</p>
+                  <p><strong>Website:</strong> jeremygonsalves.com</p>
+                  <p><strong>Languages:</strong> Bilingual (French & English)</p>
                 </div>
               </div>
 
-              {/* Professional Summary */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
-                  <Briefcase className="w-5 h-5 mr-2 text-blue-600" />
-                  Professional Summary
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  Bilingual data analyst with over 1 year of experience in data-driven roles focused on analytics, 
-                  process optimization, and scalable data solutions. Skilled in SQL, Python, and A/B testing 
-                  methodologies to inform decisions and drive user engagement, growth, and profitability.
-                </p>
-              </div>
-
-              {/* Technical Skills */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
-                  <Database className="w-5 h-5 mr-2 text-blue-600" />
-                  Technical Skills
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-700 mb-2">Programming & Analytics</h4>
-                    <p className="text-gray-600">Python, SQL, R, Excel, Tableau, Power BI</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-700 mb-2">Machine Learning</h4>
-                    <p className="text-gray-600">TensorFlow, PyTorch, Scikit-learn, XGBoost</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-700 mb-2">Data Processing</h4>
-                    <p className="text-gray-600">Pandas, NumPy, PySpark, Apache Spark</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-700 mb-2">Web Development</h4>
-                    <p className="text-gray-600">React, TypeScript, HTML, CSS, JavaScript</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Experience */}
-              <div className="mb-8">
+              {/* Current Role Card */}
+              <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
                   <Briefcase className="w-5 h-5 mr-2 text-blue-600" />
-                  Professional Experience
+                  Current Role
                 </h3>
-                <div className="space-y-4">
-                  <div className="border-l-4 border-blue-600 pl-4">
-                    <h4 className="font-semibold text-gray-800">Data Analyst</h4>
-                    <p className="text-blue-600 font-medium">Company Name • 2023 - Present</p>
-                    <ul className="text-gray-700 mt-2 space-y-1">
-                      <li>• Developed analytics workflows and dashboards for data-driven decision making</li>
-                      <li>• Implemented A/B testing methodologies to optimize user engagement</li>
-                      <li>• Collaborated cross-functionally with technical and non-technical teams</li>
-                    </ul>
-                  </div>
+                <div className="space-y-2 text-gray-700">
+                  <p><strong>Position:</strong> Business Intelligence Associate</p>
+                  <p><strong>Company:</strong> TD Bank</p>
+                  <p><strong>Location:</strong> Toronto, ON</p>
+                  <p><strong>Duration:</strong> June 2025 - Present</p>
+                  <p className="text-sm text-gray-600 mt-3">
+                    Reduced manual business reporting by 20% through scalable ETL pipelines and improved data delivery speed by 30%.
+                  </p>
                 </div>
               </div>
 
-              {/* Education */}
-              <div className="mb-8">
+              {/* Education Card */}
+              <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
                   <GraduationCap className="w-5 h-5 mr-2 text-blue-600" />
                   Education
                 </h3>
-                <div className="border-l-4 border-blue-600 pl-4">
-                  <h4 className="font-semibold text-gray-800">Bachelor of Science in Data Science</h4>
-                  <p className="text-blue-600 font-medium">University Name • 2019 - 2023</p>
-                  <p className="text-gray-700 mt-1">Relevant Coursework: Machine Learning, Statistics, Database Systems</p>
+                <div className="space-y-2 text-gray-700">
+                  <p><strong>Degree:</strong> Applied Mathematics Engineering</p>
+                  <p><strong>University:</strong> Queen's University</p>
+                  <p><strong>Location:</strong> Kingston, ON</p>
+                  <p><strong>Duration:</strong> September 2019 - April 2024</p>
+                  <p><strong>Honors:</strong> First Class Honours</p>
                 </div>
               </div>
 
-              {/* Projects */}
-              <div className="mb-8">
+              {/* Key Skills Card */}
+              <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                  <Database className="w-5 h-5 mr-2 text-blue-600" />
+                  Key Skills
+                </h3>
+                <div className="space-y-2 text-gray-700">
+                  <p><strong>Programming:</strong> Python, SQL, MATLAB</p>
+                  <p><strong>ML/AI:</strong> TensorFlow, PyTorch, Scikit-learn</p>
+                  <p><strong>Data Tools:</strong> Power BI, Looker, Superset</p>
+                  <p><strong>Cloud:</strong> AWS, PySpark, Airflow</p>
+                  <p><strong>Web Dev:</strong> Flask, React, TypeScript</p>
+                </div>
+              </div>
+
+              {/* Notable Projects Card */}
+              <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
                   <Award className="w-5 h-5 mr-2 text-blue-600" />
-                  Key Projects
+                  Notable Projects
                 </h3>
-                <div className="space-y-3">
-                  <div className="bg-gray-50 p-3 rounded">
-                    <h4 className="font-semibold text-gray-800">Real-Time Stock Price Predictor</h4>
-                    <p className="text-gray-600 text-sm">LSTM neural networks with Slack integration for automated trading alerts</p>
+                <div className="space-y-3 text-gray-700">
+                  <div>
+                    <p className="font-semibold">Real-Time Stock Prediction System</p>
+                    <p className="text-sm text-gray-600">42% accuracy with LSTM neural networks</p>
                   </div>
-                  <div className="bg-gray-50 p-3 rounded">
-                    <h4 className="font-semibold text-gray-800">NHL Draft Prediction Model</h4>
-                    <p className="text-gray-600 text-sm">Multi-model ensemble achieving 85% accuracy in draft position prediction</p>
+                  <div>
+                    <p className="font-semibold">NHL Draft Prediction Model</p>
+                    <p className="text-sm text-gray-600">82% accuracy in draft position prediction</p>
                   </div>
-                  <div className="bg-gray-50 p-3 rounded">
-                    <h4 className="font-semibold text-gray-800">Healthcare Analytics Dashboard</h4>
-                    <p className="text-gray-600 text-sm">Research project analyzing cognitive decline factors using PySpark</p>
+                  <div>
+                    <p className="font-semibold">DataFlow Pro SaaS Platform</p>
+                    <p className="text-sm text-gray-600">90% reduction in manual reporting time</p>
                   </div>
                 </div>
               </div>
 
-              {/* Download Button */}
-              <div className="text-center pt-6 border-t-2 border-gray-200">
-                <a
-                  href="https://docs.google.com/document/d/1fKOhy8o-gwWtrIlvbLbSiBycjc8ezfz9/edit?usp=sharing&ouid=106194094018121644660&rtpof=true&sd=true"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
-                >
-                  <Download className="w-5 h-5" />
-                  Download Full Resume
-                </a>
+              {/* Achievements Card */}
+              <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl p-6">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                  <Award className="w-5 h-5 mr-2 text-blue-600" />
+                  Key Achievements
+                </h3>
+                <div className="space-y-2 text-gray-700">
+                  <p>• 1st place in TD's BI Practice Town Hall (Q3 2025)</p>
+                  <p>• Founded Jeremy's Tutoring Academy ($20K+ profit)</p>
+                  <p>• 95% accuracy in financial transaction categorization</p>
+                  <p>• 30% reduction in ETL processing time at Credit Sesame</p>
+                  <p>• Promoted from intern to full-time at OTPP</p>
+                </div>
               </div>
+            </div>
+
+            {/* Download Button */}
+            <div className="text-center mt-12">
+              <a
+                href="https://docs.google.com/document/d/1fKOhy8o-gwWtrIlvbLbSiBycjc8ezfz9/edit?usp=sharing&ouid=106194094018121644660&rtpof=true&sd=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 text-lg"
+              >
+                <Download className="w-5 h-5" />
+                View Full Resume
+              </a>
             </div>
           </div>
         </div>
