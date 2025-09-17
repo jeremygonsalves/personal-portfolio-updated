@@ -16,7 +16,6 @@ const SpaceBackground: React.FC = () => {
         camera: THREE.PerspectiveCamera,
         sphereBg: THREE.Mesh,
         nucleus: THREE.Mesh,
-        stars: THREE.Points,
         controls: OrbitControls,
         clock = new THREE.Clock();
 
@@ -56,10 +55,6 @@ const SpaceBackground: React.FC = () => {
       const loader = new THREE.TextureLoader();
       const textureSphereBg = loader.load('https://i.ibb.co/HC0vxMw/sky2.jpg');
       const texturenucleus = loader.load('https://i.ibb.co/hcN2qXk/star-nc8wkw.jpg');
-      const textureStar = loader.load("https://i.ibb.co/ZKsdYSz/p1-g3zb2a.png");
-      const texture1 = loader.load("https://i.ibb.co/F8by6wW/p2-b3gnym.png");  
-      const texture2 = loader.load("https://i.ibb.co/yYS2yx5/p3-ttfn70.png");
-      const texture4 = loader.load("https://i.ibb.co/yWfKkHh/p4-avirap.png");
 
       // Nucleus
       texturenucleus.anisotropy = 16;
@@ -84,69 +79,11 @@ const SpaceBackground: React.FC = () => {
       sphereBg = new THREE.Mesh(geometrySphereBg, materialSphereBg);
       scene.add(sphereBg);
 
-      // Stars
-      const starsGeometry = new THREE.BufferGeometry();
-      const starVertices = [];
-      const starVelocities = [];
-      const startPositions = [];
+      // Stars removed for cleaner background
 
-      for (let i = 0; i < 50; i++) {
-        const particle = randomPointSphere(150);
-        starVertices.push(particle.x, particle.y, particle.z);
-        const velocity = THREE.MathUtils.randInt(50, 200);
-        starVelocities.push(velocity);
-        startPositions.push(particle.x, particle.y, particle.z);
-      }
-
-      starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
-      const starsMaterial = new THREE.PointsMaterial({
-        size: 5,
-        color: "#ffffff",
-        transparent: true,
-        opacity: 0.8,
-        map: textureStar,
-        blending: THREE.AdditiveBlending,
-      });
-      starsMaterial.depthWrite = false;
-      stars = new THREE.Points(starsGeometry, starsMaterial);
-      scene.add(stars);
-
-      // Fixed Stars
-      function createStars(texture: THREE.Texture, size: number, total: number) {
-        const pointGeometry = new THREE.BufferGeometry();
-        const vertices = [];
-        
-        for (let i = 0; i < total; i++) {
-          const radius = THREE.MathUtils.randInt(149, 70);
-          const particle = randomPointSphere(radius);
-          vertices.push(particle.x, particle.y, particle.z);
-        }
-        
-        pointGeometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-        const pointMaterial = new THREE.PointsMaterial({
-          size: size,
-          map: texture,
-          blending: THREE.AdditiveBlending,
-          transparent: true,
-          opacity: 0.8
-        });
-        
-        return new THREE.Points(pointGeometry, pointMaterial);
-      }
-
-      scene.add(createStars(texture1, 15, 20));
-      scene.add(createStars(texture2, 5, 5));
-      scene.add(createStars(texture4, 7, 5));
+      // Fixed Stars removed for cleaner background
     };
 
-    function randomPointSphere(radius: number) {
-      const theta = 2 * Math.PI * Math.random();
-      const phi = Math.acos(2 * Math.random() - 1);
-      const dx = 0 + (radius * Math.sin(phi) * Math.cos(theta));
-      const dy = 0 + (radius * Math.sin(phi) * Math.sin(theta));
-      const dz = 0 + (radius * Math.cos(phi));
-      return new THREE.Vector3(dx, dy, dz);
-    }
 
     function animate() {
       requestAnimationFrame(animate);
