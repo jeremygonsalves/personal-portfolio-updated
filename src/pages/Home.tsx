@@ -101,30 +101,102 @@ const Home = () => {
 
         <TechStack />
 
-        {/* About Me Section */}
+        {/* Timeline Section */}
         <div className="py-16 bg-black/30 backdrop-blur-sm">
           <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-8">About Me</h2>
-            <div className="space-y-6">
-              <p className="text-base md:text-lg leading-relaxed text-white">
-                Bilingual Data Scientist with expertise in Python, SQL, and cloud-based deployments, specializing in statistical analysis, predictive modeling, and machine learning integration. Skilled in building and validating ML models with scikit-learn and PyTorch, applying advanced techniques to solve business problems and deliver actionable insights. Experienced in designing scalable ETL pipelines, automating data workflows, and integrating models with APIs and databases to support decision-making across teams. Adept at data visualization and dashboarding with tools like Power BI, ensuring stakeholders receive clear, reliable insights.
-              </p>
-              
-              <p className="text-base md:text-lg leading-relaxed text-white">
-                As an outgoing individual, I thrive in client-facing environments, where I can apply my technical skills to solve complex problems while building strong relationships. Im extremely passionate about contributing to innovative projects in industries like financial services, sports, technology, and e-commerce.
-              </p>
-              
-              <div className="mt-8">
-                <h3 className="text-xl font-bold text-center text-white mb-4">Skills & Interests</h3>
-                <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
-                  <li className="text-white">
-                    <span className="font-medium">Professional Skills:</span> Continuous Learner and Problem Solver, Teaching and Training Skills, Entrepreneurial Mindset, Analytical Thinker, Presentation Preparation, Data Visualization, Financial Modelling, Interpersonal Skills, and Leadership.
-                  </li>
-                  <li className="text-white">
-                    <span className="font-medium">Personal Interests:</span> Triathlete focusing on Fitness and Wellness, Language Learner (Spanish, Dutch, Italian).
-                  </li>
-                </ul>
-              </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-12">My Journey</h2>
+            
+            {/* Timeline */}
+            <div className="timeline-container">
+              <ul className="timeline">
+                {/* Technical Skills */}
+                <li>
+                  <div className="direction-r">
+                    <div className="flag-wrapper">
+                      <span className="flag">Technical Skills</span>
+                      <span className="time-wrapper"><span className="time">Core Expertise</span></span>
+                    </div>
+                    <div className="desc">
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+                        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">Python</span>
+                        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">TensorFlow</span>
+                        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">PyTorch</span>
+                        <span className="bg-green-100 text-green-800 px-2 py-1 rounded">SQL</span>
+                        <span className="bg-green-100 text-green-800 px-2 py-1 rounded">Power BI</span>
+                        <span className="bg-green-100 text-green-800 px-2 py-1 rounded">Excel</span>
+                        <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded">React</span>
+                        <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded">TypeScript</span>
+                        <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded">Three.js</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                {/* Professional Background */}
+                <li>
+                  <div className="direction-l">
+                    <div className="flag-wrapper">
+                      <span className="flag">Professional Background</span>
+                      <span className="time-wrapper"><span className="time">Current Focus</span></span>
+                    </div>
+                    <div className="desc">
+                      Bilingual Data Scientist with expertise in Python, SQL, and cloud-based deployments, specializing in statistical analysis, predictive modeling, and machine learning integration. Skilled in building and validating ML models with scikit-learn and PyTorch, applying advanced techniques to solve business problems and deliver actionable insights.
+                    </div>
+                  </div>
+                </li>
+
+                {/* Experience & Approach */}
+                <li>
+                  <div className="direction-r">
+                    <div className="flag-wrapper">
+                      <span className="flag">Experience & Approach</span>
+                      <span className="time-wrapper"><span className="time">Work Style</span></span>
+                    </div>
+                    <div className="desc">
+                      Experienced in designing scalable ETL pipelines, automating data workflows, and integrating models with APIs and databases to support decision-making across teams. Adept at data visualization and dashboarding with tools like Power BI, ensuring stakeholders receive clear, reliable insights.
+                    </div>
+                  </div>
+                </li>
+
+                {/* Personal Philosophy */}
+                <li>
+                  <div className="direction-l">
+                    <div className="flag-wrapper">
+                      <span className="flag">Personal Philosophy</span>
+                      <span className="time-wrapper"><span className="time">Who I Am</span></span>
+                    </div>
+                    <div className="desc">
+                      As an outgoing individual, I thrive in client-facing environments, where I can apply my technical skills to solve complex problems while building strong relationships. I'm extremely passionate about contributing to innovative projects in industries like financial services, sports, technology, and e-commerce.
+                    </div>
+                  </div>
+                </li>
+
+                {/* Professional Skills */}
+                <li>
+                  <div className="direction-r">
+                    <div className="flag-wrapper">
+                      <span className="flag">Professional Skills</span>
+                      <span className="time-wrapper"><span className="time">Core Competencies</span></span>
+                    </div>
+                    <div className="desc">
+                      Continuous Learner and Problem Solver, Teaching and Training Skills, Entrepreneurial Mindset, Analytical Thinker, Presentation Preparation, Data Visualization, Financial Modelling, Interpersonal Skills, and Leadership.
+                    </div>
+                  </div>
+                </li>
+
+                {/* Personal Interests */}
+                <li>
+                  <div className="direction-l">
+                    <div className="flag-wrapper">
+                      <span className="flag">Personal Interests</span>
+                      <span className="time-wrapper"><span className="time">Beyond Work</span></span>
+                    </div>
+                    <div className="desc">
+                      Triathlete focusing on Fitness and Wellness, Language Learner (Spanish, Dutch, Italian). Passionate about continuous growth both professionally and personally.
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
