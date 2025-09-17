@@ -1,8 +1,7 @@
-import React from 'react';
 import SpaceBackground from '../components/SpaceBackground';
 import TechStack from '../components/TechStack';
 import DailyStoicQuote from '../components/DailyStoicQuote';
-import { Mail, Github, Linkedin, FileText, Database, BarChart2, LineChart } from 'lucide-react';
+import { Mail, Github, Linkedin, FileText, Database, BarChart2, LineChart, Download, MapPin, Award, Briefcase, GraduationCap, Languages } from 'lucide-react';
 
 const Home = () => {
   const skills = [
@@ -125,6 +124,141 @@ const Home = () => {
                     <span className="font-medium">Personal Interests:</span> Triathlete focusing on Fitness and Wellness, Language Learner (Spanish, Dutch, Italian).
                   </li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Resume Preview Section */}
+        <div className="py-16 bg-gradient-to-b from-black/20 to-black/40 backdrop-blur-sm">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">Resume Preview</h2>
+            
+            <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-2xl p-8 md:p-12 max-w-4xl mx-auto">
+              {/* Header */}
+              <div className="text-center mb-8 border-b-2 border-gray-200 pb-6">
+                <h1 className="text-3xl font-bold text-gray-800 mb-2">Jeremy Gonsalves</h1>
+                <p className="text-xl text-blue-600 font-semibold mb-4">Data Analytics & Business Intelligence</p>
+                <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+                  <div className="flex items-center gap-1">
+                    <Mail className="w-4 h-4" />
+                    <span>jeremygonsalves98@outlook.com</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <MapPin className="w-4 h-4" />
+                    <span>Toronto, ON</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Languages className="w-4 h-4" />
+                    <span>Bilingual (French & English)</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Professional Summary */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
+                  <Briefcase className="w-5 h-5 mr-2 text-blue-600" />
+                  Professional Summary
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Bilingual data analyst with over 1 year of experience in data-driven roles focused on analytics, 
+                  process optimization, and scalable data solutions. Skilled in SQL, Python, and A/B testing 
+                  methodologies to inform decisions and drive user engagement, growth, and profitability.
+                </p>
+              </div>
+
+              {/* Technical Skills */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 flex items-center">
+                  <Database className="w-5 h-5 mr-2 text-blue-600" />
+                  Technical Skills
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 className="font-semibold text-gray-700 mb-2">Programming & Analytics</h4>
+                    <p className="text-gray-600">Python, SQL, R, Excel, Tableau, Power BI</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-700 mb-2">Machine Learning</h4>
+                    <p className="text-gray-600">TensorFlow, PyTorch, Scikit-learn, XGBoost</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-700 mb-2">Data Processing</h4>
+                    <p className="text-gray-600">Pandas, NumPy, PySpark, Apache Spark</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-700 mb-2">Web Development</h4>
+                    <p className="text-gray-600">React, TypeScript, HTML, CSS, JavaScript</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Experience */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                  <Briefcase className="w-5 h-5 mr-2 text-blue-600" />
+                  Professional Experience
+                </h3>
+                <div className="space-y-4">
+                  <div className="border-l-4 border-blue-600 pl-4">
+                    <h4 className="font-semibold text-gray-800">Data Analyst</h4>
+                    <p className="text-blue-600 font-medium">Company Name • 2023 - Present</p>
+                    <ul className="text-gray-700 mt-2 space-y-1">
+                      <li>• Developed analytics workflows and dashboards for data-driven decision making</li>
+                      <li>• Implemented A/B testing methodologies to optimize user engagement</li>
+                      <li>• Collaborated cross-functionally with technical and non-technical teams</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Education */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                  <GraduationCap className="w-5 h-5 mr-2 text-blue-600" />
+                  Education
+                </h3>
+                <div className="border-l-4 border-blue-600 pl-4">
+                  <h4 className="font-semibold text-gray-800">Bachelor of Science in Data Science</h4>
+                  <p className="text-blue-600 font-medium">University Name • 2019 - 2023</p>
+                  <p className="text-gray-700 mt-1">Relevant Coursework: Machine Learning, Statistics, Database Systems</p>
+                </div>
+              </div>
+
+              {/* Projects */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                  <Award className="w-5 h-5 mr-2 text-blue-600" />
+                  Key Projects
+                </h3>
+                <div className="space-y-3">
+                  <div className="bg-gray-50 p-3 rounded">
+                    <h4 className="font-semibold text-gray-800">Real-Time Stock Price Predictor</h4>
+                    <p className="text-gray-600 text-sm">LSTM neural networks with Slack integration for automated trading alerts</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded">
+                    <h4 className="font-semibold text-gray-800">NHL Draft Prediction Model</h4>
+                    <p className="text-gray-600 text-sm">Multi-model ensemble achieving 85% accuracy in draft position prediction</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded">
+                    <h4 className="font-semibold text-gray-800">Healthcare Analytics Dashboard</h4>
+                    <p className="text-gray-600 text-sm">Research project analyzing cognitive decline factors using PySpark</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Download Button */}
+              <div className="text-center pt-6 border-t-2 border-gray-200">
+                <a
+                  href="https://docs.google.com/document/d/1fKOhy8o-gwWtrIlvbLbSiBycjc8ezfz9/edit?usp=sharing&ouid=106194094018121644660&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
+                >
+                  <Download className="w-5 h-5" />
+                  Download Full Resume
+                </a>
               </div>
             </div>
           </div>
