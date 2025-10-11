@@ -1,19 +1,230 @@
 import SpaceBackground from '../components/SpaceBackground';
 import DailyStoicQuote from '../components/DailyStoicQuote';
-import { Mail, Github, Linkedin, FileText, Database, BarChart2, LineChart, Download, Award, Briefcase, GraduationCap } from 'lucide-react';
+import { Mail, Github, Linkedin, FileText, Database, BarChart2, LineChart, Download, Award, Briefcase, GraduationCap, User, Zap, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
 
 const Home = () => {
+  const [showChoice, setShowChoice] = useState(true);
+  const [showSlackContact, setShowSlackContact] = useState(false);
+
   const skills = [
     { icon: <Database className="w-8 h-8" />, name: "Data Science", description: "Expert in SQL & Python" },
     { icon: <BarChart2 className="w-8 h-8" />, name: "Business Intelligence", description: "Dashboard Design" },
     { icon: <LineChart className="w-8 h-8" />, name: "Machine Learning", description: "Predictive Analytics" }
   ];
 
+  const handleViewProfile = () => {
+    setShowChoice(false);
+    setShowSlackContact(false);
+  };
+
+  const handleSlackPipeline = () => {
+    setShowChoice(false);
+    setShowSlackContact(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="relative min-h-screen bg-transparent">
       <SpaceBackground />
       
       <div className="relative z-20">
+        {/* Choice Section */}
+        {showChoice && (
+          <div className="min-h-screen flex flex-col justify-center items-center px-4 text-white">
+            <div className="max-w-6xl w-full text-center space-y-8">
+              <h1 className="text-4xl md:text-6xl font-bold mb-8">
+                Welcome
+              </h1>
+              <p className="text-xl md:text-2xl text-blue-400 mb-16">
+                What brings you here today?
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                {/* Personal Profile Option */}
+                <button
+                  onClick={handleViewProfile}
+                  className="group relative bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm p-8 md:p-12 rounded-2xl border-2 border-blue-500/50 hover:border-blue-400 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/50"
+                >
+                  <div className="flex flex-col items-center space-y-6">
+                    <div className="bg-blue-500/20 p-6 rounded-full">
+                      <User className="w-16 h-16 text-blue-400" />
+                    </div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-white">
+                      View Personal Profile
+                    </h2>
+                    <p className="text-gray-300 text-lg">
+                      Learn about my background, skills, and experience in Data Science & Business Intelligence
+                    </p>
+                    <div className="flex items-center space-x-2 text-blue-400 group-hover:text-blue-300 transition-colors">
+                      <span className="font-semibold">Explore My Work</span>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
+                </button>
+
+                {/* Slack Pipeline Option */}
+                <button
+                  onClick={handleSlackPipeline}
+                  className="group relative bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm p-8 md:p-12 rounded-2xl border-2 border-purple-500/50 hover:border-purple-400 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-purple-500/50"
+                >
+                  <div className="flex flex-col items-center space-y-6">
+                    <div className="bg-purple-500/20 p-6 rounded-full">
+                      <Zap className="w-16 h-16 text-purple-400" />
+                    </div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-white">
+                      Slack Pipeline Augmentation
+                    </h2>
+                    <p className="text-gray-300 text-lg">
+                      Interested in enhancing your Slack data pipelines? Let's discuss how I can help
+                    </p>
+                    <div className="flex items-center space-x-2 text-purple-400 group-hover:text-purple-300 transition-colors">
+                      <span className="font-semibold">Get In Touch</span>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                    </div>
+                  </div>
+                </button>
+              </div>
+
+              <div className="mt-12 text-gray-400">
+                <p className="text-sm">Select an option to continue</p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Slack Pipeline Contact Form */}
+        {showSlackContact && (
+          <div className="min-h-screen flex flex-col justify-center items-center px-4 text-white py-20">
+            <div className="max-w-3xl w-full">
+              <button
+                onClick={() => {
+                  setShowChoice(true);
+                  setShowSlackContact(false);
+                }}
+                className="mb-8 text-blue-400 hover:text-blue-300 transition-colors flex items-center space-x-2"
+              >
+                <ArrowRight className="w-5 h-5 rotate-180" />
+                <span>Back to Options</span>
+              </button>
+
+              <div className="bg-black/40 backdrop-blur-sm rounded-2xl border border-purple-500/50 p-8 md:p-12 shadow-2xl">
+                <div className="text-center mb-8">
+                  <div className="inline-block bg-purple-500/20 p-4 rounded-full mb-4">
+                    <Zap className="w-12 h-12 text-purple-400" />
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                    Slack Pipeline Augmentation
+                  </h2>
+                  <p className="text-gray-300 text-lg">
+                    Let's discuss how I can help optimize and enhance your Slack data pipelines
+                  </p>
+                </div>
+
+                <form className="space-y-6" onSubmit={(e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.currentTarget);
+                  const name = formData.get('name');
+                  const email = formData.get('email');
+                  const company = formData.get('company');
+                  const message = formData.get('message');
+                  
+                  const subject = 'Slack Pipeline Augmentation Inquiry';
+                  const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0ACompany: ${company}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+                  window.location.href = `mailto:jeremygonsalves98@gmail.com?subject=${subject}&body=${body}`;
+                }}>
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                      Your Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400"
+                      placeholder="John Doe"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400"
+                      placeholder="john@company.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400"
+                      placeholder="Your Company"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                      Tell me about your Slack pipeline needs *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={6}
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400 resize-none"
+                      placeholder="Describe your current Slack pipeline setup and what improvements you're looking for..."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center space-x-2"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span>Send Message</span>
+                  </button>
+                </form>
+
+                <div className="mt-8 text-center text-gray-400">
+                  <p className="text-sm">
+                    Or reach me directly at{' '}
+                    <a href="mailto:jeremygonsalves98@gmail.com" className="text-purple-400 hover:text-purple-300">
+                      jeremygonsalves98@gmail.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Personal Profile Content */}
+        {!showChoice && !showSlackContact && (
+          <>
+            <div className="pt-20">
+              <button
+                onClick={() => {
+                  setShowChoice(true);
+                }}
+                className="fixed top-24 left-4 md:left-8 z-30 text-blue-400 hover:text-blue-300 transition-colors flex items-center space-x-2 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-blue-500/50"
+              >
+                <ArrowRight className="w-5 h-5 rotate-180" />
+                <span>Back to Options</span>
+              </button>
+            </div>
+
         <div className="min-h-screen flex flex-col justify-center items-center px-4 text-white">
           <div className="max-w-4xl w-full text-center space-y-6 px-4">
             <div className="mb-8">
@@ -335,6 +546,8 @@ const Home = () => {
         <div className="relative z-10">
         <DailyStoicQuote />
         </div>
+        </>
+        )}
       </div>
     </div>
   );
