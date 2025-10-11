@@ -1,4 +1,5 @@
 import SpaceBackground from '../components/SpaceBackground';
+import SlackBackground from '../components/SlackBackground';
 import DailyStoicQuote from '../components/DailyStoicQuote';
 import { Mail, Github, Linkedin, FileText, Database, BarChart2, LineChart, Download, Award, Briefcase, GraduationCap, User, Zap, ArrowRight } from 'lucide-react';
 import { useState } from 'react';
@@ -26,7 +27,7 @@ const Home = () => {
 
   return (
     <div className="relative min-h-screen bg-transparent">
-      <SpaceBackground />
+      {showSlackContact ? <SlackBackground /> : <SpaceBackground />}
       
       <div className="relative z-20">
         {/* Choice Section */}
@@ -63,7 +64,7 @@ const Home = () => {
                   </div>
                 </button>
 
-                {/* Slack Pipeline Option */}
+                {/* Slack/Discord Automations Option */}
                 <button
                   onClick={handleSlackPipeline}
                   className="group relative bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm p-8 md:p-12 rounded-2xl border-2 border-purple-500/50 hover:border-purple-400 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-purple-500/50"
@@ -73,10 +74,10 @@ const Home = () => {
                       <Zap className="w-16 h-16 text-purple-400" />
                     </div>
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
-                      Slack Pipeline Augmentation
+                      Slack/Discord Automations
                     </h2>
                     <p className="text-gray-300 text-lg">
-                      Interested in enhancing your Slack data pipelines? Let's discuss how I can help
+                      Interested in enhancing your Slack or Discord workflows? Let's discuss how I can help
                     </p>
                     <div className="flex items-center space-x-2 text-purple-400 group-hover:text-purple-300 transition-colors">
                       <span className="font-semibold">Get In Touch</span>
@@ -114,10 +115,10 @@ const Home = () => {
                     <Zap className="w-12 h-12 text-purple-400" />
                   </div>
                   <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                    Slack Pipeline Augmentation
+                    Slack/Discord Automations
                   </h2>
                   <p className="text-gray-300 text-lg">
-                    Let's discuss how I can help optimize and enhance your Slack data pipelines
+                    Let's discuss how I can help optimize and enhance your Slack or Discord workflows
                   </p>
                 </div>
 
@@ -129,7 +130,7 @@ const Home = () => {
                   const company = formData.get('company');
                   const message = formData.get('message');
                   
-                  const subject = 'Slack Pipeline Augmentation Inquiry';
+                  const subject = 'Slack/Discord Automation Inquiry';
                   const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0ACompany: ${company}%0D%0A%0D%0AMessage:%0D%0A${message}`;
                   window.location.href = `mailto:jeremygonsalves98@gmail.com?subject=${subject}&body=${body}`;
                 }}>
@@ -176,7 +177,7 @@ const Home = () => {
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Tell me about your Slack pipeline needs *
+                      Tell me about your Slack/Discord automation needs *
                     </label>
                     <textarea
                       id="message"
@@ -184,7 +185,7 @@ const Home = () => {
                       required
                       rows={6}
                       className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400 resize-none"
-                      placeholder="Describe your current Slack pipeline setup and what improvements you're looking for..."
+                      placeholder="Describe your current Slack or Discord setup and what automation improvements you're looking for..."
                     />
                   </div>
 
