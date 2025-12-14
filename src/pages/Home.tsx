@@ -296,7 +296,7 @@ const Home = () => {
                 </span>
               </a>
               <a 
-                href="https://docs.google.com/document/d/1fKOhy8o-gwWtrIlvbLbSiBycjc8ezfz9/edit?usp=sharing&ouid=106194094018121644660&rtpof=true&sd=true" 
+                href="https://docs.google.com/document/d/1oztdUkk0JvH0Ej61mU3cK6F6rPaLKQ3p/edit" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="group relative text-white hover:text-blue-500 transition-colors"
@@ -419,7 +419,7 @@ const Home = () => {
             <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-2xl p-4 md:p-8 max-w-5xl mx-auto mb-8">
               <div className="aspect-[8.5/11] w-full">
                 <iframe
-                  src="https://docs.google.com/document/d/1fKOhy8o-gwWtrIlvbLbSiBycjc8ezfz9/edit?usp=sharing&ouid=106194094018121644660&rtpof=true&sd=true&embedded=true"
+                  src="https://docs.google.com/document/d/1oztdUkk0JvH0Ej61mU3cK6F6rPaLKQ3p/edit?embedded=true"
                   className="w-full h-full rounded-lg border-0"
                   title="Jeremy Gonsalves Resume"
                   loading="lazy"
@@ -532,7 +532,7 @@ const Home = () => {
             {/* Download Button */}
             <div className="text-center mt-12">
               <a
-                href="https://docs.google.com/document/d/1fKOhy8o-gwWtrIlvbLbSiBycjc8ezfz9/edit?usp=sharing&ouid=106194094018121644660&rtpof=true&sd=true"
+                href="https://docs.google.com/document/d/1oztdUkk0JvH0Ej61mU3cK6F6rPaLKQ3p/edit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 text-lg"
