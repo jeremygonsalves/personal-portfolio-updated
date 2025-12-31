@@ -1,4 +1,14 @@
-export const projectsList = [
+export interface Project {
+  title: string;
+  description: string;
+  detailedDescription?: string[];
+  tags: string[];
+  image: string;
+  github: string;
+  pdf?: string;
+}
+
+export const projectsList: Project[] = [
   {
     title: "Real-Time Stock Price Predictor with Slack Integration",
     description: "Sophisticated real-time stock prediction system providing buy/sell recommendations at 12pm daily, featuring LSTM neural networks, sentiment analysis, and automated Slack alerts",
@@ -11,7 +21,8 @@ export const projectsList = [
     ],
     tags: ["Python", "Machine Learning", "Deep Learning", "Neural Networks", "Data Science"],
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    github: "https://github.com/jeremygonsalves/price-predictor-stocks"
+    github: "https://github.com/jeremygonsalves/price-predictor-stocks",
+    pdf: "/Stock_Predictor.pdf"
   },
   {
     title: "NHL Draft Prediction Model",

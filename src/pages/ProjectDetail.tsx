@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Github, TrendingUp, Clock, AlertTriangle, Zap, Brain, MessageSquare, BarChart3, Settings } from 'lucide-react';
+import { ArrowLeft, Github, TrendingUp, Clock, AlertTriangle, Zap, Brain, MessageSquare, BarChart3, Settings, FileText } from 'lucide-react';
 import SpaceBackground from '../components/SpaceBackground';
 import { projectsList } from '../data/projects';
 
@@ -260,7 +260,7 @@ const ProjectDetail = () => {
               </div>
             )}
             
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 flex-wrap gap-4">
               <a
                 href={project.github}
                 target="_blank"
@@ -270,6 +270,17 @@ const ProjectDetail = () => {
                 <Github className="w-5 h-5" />
                 <span>View Code</span>
               </a>
+              {project.pdf && (
+                <a
+                  href={project.pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 px-6 py-3 bg-purple-900 rounded-lg text-white font-medium hover:bg-purple-800 transition-colors"
+                >
+                  <FileText className="w-5 h-5" />
+                  <span>View Documentation</span>
+                </a>
+              )}
               {isStockPredictor && (
                 <div className="inline-flex items-center space-x-2 px-6 py-3 bg-green-900/30 border border-green-500/30 rounded-lg text-green-400 font-medium">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
