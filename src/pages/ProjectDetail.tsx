@@ -17,7 +17,7 @@ const ProjectDetail = () => {
             <h1 className="text-2xl font-bold mb-4 text-white">Project not found</h1>
             <Link 
               to="/projects" 
-              className="text-blue-500 hover:text-blue-400 transition-colors"
+              className="text-purple-500 hover:text-purple-400 transition-colors"
             >
               Back to Projects
             </Link>
@@ -40,7 +40,7 @@ const ProjectDetail = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 pt-20 pb-12">
         <Link 
           to="/projects"
-          className="inline-flex items-center space-x-2 text-blue-500 hover:text-blue-400 transition-colors mb-8"
+          className="inline-flex items-center space-x-2 text-purple-500 hover:text-purple-400 transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Projects</span>
@@ -61,7 +61,7 @@ const ProjectDetail = () => {
                     <span className="text-green-400 text-sm font-medium">LIVE PREDICTIONS</span>
                   </div>
                   <h1 className="text-4xl font-bold text-white mb-2">{project.title}</h1>
-                  <p className="text-blue-300 text-lg">Real-time AI-powered stock analysis with Slack integration</p>
+                  <p className="text-purple-300 text-lg">Real-time AI-powered stock analysis with Slack integration</p>
                 </div>
               </div>
             )}
@@ -69,11 +69,11 @@ const ProjectDetail = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end">
                 <div className="p-6 w-full">
                   <div className="flex items-center space-x-2 mb-2">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-                    <span className="text-blue-400 text-sm font-medium">85% ACCURACY</span>
+                    <div className="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
+                    <span className="text-purple-400 text-sm font-medium">85% ACCURACY</span>
                   </div>
                   <h1 className="text-4xl font-bold text-white mb-2">{project.title}</h1>
-                  <p className="text-blue-300 text-lg">Advanced NLP-powered draft prediction with multi-model ensemble</p>
+                  <p className="text-purple-300 text-lg">Advanced NLP-powered draft prediction with multi-model ensemble</p>
                 </div>
               </div>
             )}
@@ -88,7 +88,7 @@ const ProjectDetail = () => {
               {project.tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 text-sm rounded-full bg-blue-900/20 text-blue-400 border border-blue-900/30"
+                  className="px-3 py-1 text-sm rounded-full bg-purple-900/20 text-purple-400 border border-purple-900/30"
                 >
                   {tag}
                 </span>
@@ -102,15 +102,15 @@ const ProjectDetail = () => {
             {isStockPredictor && (
               <div className="mb-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                  <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-4 rounded-lg border border-blue-500/30">
+                  <div className="bg-gradient-to-br from-purple-900/30 to-purple-900/30 p-4 rounded-lg border border-purple-500/30">
                     <div className="flex items-center space-x-2 mb-2">
-                      <Brain className="w-5 h-5 text-blue-400" />
-                      <span className="text-blue-400 font-medium">LSTM Neural Networks</span>
+                      <Brain className="w-5 h-5 text-purple-400" />
+                      <span className="text-purple-400 font-medium">LSTM Neural Networks</span>
                     </div>
                     <p className="text-white text-sm">Advanced deep learning for 4-hour price predictions</p>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-green-900/30 to-blue-900/30 p-4 rounded-lg border border-green-500/30">
+                  <div className="bg-gradient-to-br from-green-900/30 to-purple-900/30 p-4 rounded-lg border border-green-500/30">
                     <div className="flex items-center space-x-2 mb-2">
                       <MessageSquare className="w-5 h-5 text-green-400" />
                       <span className="text-green-400 font-medium">Slack Integration</span>
@@ -135,7 +135,7 @@ const ProjectDetail = () => {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-6 rounded-lg border border-blue-500/30 mb-6">
+                <div className="bg-gradient-to-r from-purple-900/20 to-purple-900/20 p-6 rounded-lg border border-purple-500/30 mb-6">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                     <Zap className="w-6 h-6 text-yellow-400 mr-2" />
                     Key Features
@@ -143,7 +143,7 @@ const ProjectDetail = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-3">
                       <div className="flex items-center space-x-3">
-                        <Clock className="w-5 h-5 text-blue-400" />
+                        <Clock className="w-5 h-5 text-purple-400" />
                         <span className="text-white">Daily 12pm buy/sell recommendations</span>
                       </div>
                       <div className="flex items-center space-x-3">
@@ -176,15 +176,15 @@ const ProjectDetail = () => {
             {isNHLDraft && (
               <div className="mb-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                  <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-4 rounded-lg border border-blue-500/30">
+                  <div className="bg-gradient-to-br from-purple-900/30 to-purple-900/30 p-4 rounded-lg border border-purple-500/30">
                     <div className="flex items-center space-x-2 mb-2">
-                      <Brain className="w-5 h-5 text-blue-400" />
-                      <span className="text-blue-400 font-medium">Multi-Model Ensemble</span>
+                      <Brain className="w-5 h-5 text-purple-400" />
+                      <span className="text-purple-400 font-medium">Multi-Model Ensemble</span>
                     </div>
                     <p className="text-white text-sm">Logistic Regression, Random Forest, SVM, Neural Networks</p>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-green-900/30 to-blue-900/30 p-4 rounded-lg border border-green-500/30">
+                  <div className="bg-gradient-to-br from-green-900/30 to-purple-900/30 p-4 rounded-lg border border-green-500/30">
                     <div className="flex items-center space-x-2 mb-2">
                       <MessageSquare className="w-5 h-5 text-green-400" />
                       <span className="text-green-400 font-medium">Advanced NLP</span>
@@ -209,7 +209,7 @@ const ProjectDetail = () => {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-6 rounded-lg border border-blue-500/30 mb-6">
+                <div className="bg-gradient-to-r from-purple-900/20 to-purple-900/20 p-6 rounded-lg border border-purple-500/30 mb-6">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center">
                     <Zap className="w-6 h-6 text-yellow-400 mr-2" />
                     Key Features
@@ -217,7 +217,7 @@ const ProjectDetail = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-3">
                       <div className="flex items-center space-x-3">
-                        <Clock className="w-5 h-5 text-blue-400" />
+                        <Clock className="w-5 h-5 text-purple-400" />
                         <span className="text-white">200+ prospects analyzed for 2023 draft</span>
                       </div>
                       <div className="flex items-center space-x-3">
@@ -253,7 +253,7 @@ const ProjectDetail = () => {
                 <h3 className="text-xl font-bold text-white mb-4">Technical Implementation</h3>
                 {project.detailedDescription.map((detail, index) => (
                   <div key={index} className="flex items-start space-x-3 text-white bg-white/5 p-4 rounded-lg">
-                    <span className="text-blue-500 mt-1.5 text-lg">•</span>
+                    <span className="text-purple-500 mt-1.5 text-lg">•</span>
                     <p className="leading-relaxed">{detail}</p>
                   </div>
                 ))}
@@ -265,7 +265,7 @@ const ProjectDetail = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 px-6 py-3 bg-blue-900 rounded-lg text-white font-medium hover:bg-blue-800 transition-colors"
+                className="inline-flex items-center space-x-2 px-6 py-3 bg-purple-900 rounded-lg text-white font-medium hover:bg-purple-800 transition-colors"
               >
                 <Github className="w-5 h-5" />
                 <span>View Code</span>
@@ -288,8 +288,8 @@ const ProjectDetail = () => {
                 </div>
               )}
               {isNHLDraft && (
-                <div className="inline-flex items-center space-x-2 px-6 py-3 bg-blue-900/30 border border-blue-500/30 rounded-lg text-blue-400 font-medium">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                <div className="inline-flex items-center space-x-2 px-6 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-purple-400 font-medium">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
                   <span>Research Project</span>
                 </div>
               )}

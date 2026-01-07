@@ -37,8 +37,8 @@ const Projects = () => {
               onClick={() => setSelectedTag(tag)}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 border-2 ${
                 selectedTag === tag
-                ? 'bg-blue-900 border-blue-900 text-white'
-                : 'bg-transparent border-white/20 text-white hover:border-blue-500 hover:text-blue-500'
+                ? 'bg-purple-900 border-purple-900 text-white'
+                : 'bg-transparent border-white/20 text-white hover:border-purple-500 hover:text-purple-500'
               }`}
             >
               {tag}
@@ -56,7 +56,7 @@ const Projects = () => {
                 key={index}
                 className={`group bg-black/50 backdrop-blur-sm rounded-lg overflow-hidden transform transition-all duration-500 hover:-translate-y-2 shadow-xl ${
                   isStockPredictor ? 'ring-2 ring-green-500/50 hover:ring-green-400/70' : 
-                  isNHLDraft ? 'ring-2 ring-blue-500/50 hover:ring-blue-400/70' : ''
+                  isNHLDraft ? 'ring-2 ring-purple-500/50 hover:ring-purple-400/70' : ''
                 }`}
               >
                 {/* Project Image */}
@@ -76,8 +76,8 @@ const Projects = () => {
                   )}
                   {isNHLDraft && (
                     <div className="absolute top-3 left-3 flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-                      <span className="text-blue-400 text-xs font-medium bg-black/50 px-2 py-1 rounded-full">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
+                      <span className="text-purple-400 text-xs font-medium bg-black/50 px-2 py-1 rounded-full">
                         85%
                       </span>
                     </div>
@@ -94,7 +94,7 @@ const Projects = () => {
                     {project.tags.slice(0, 3).map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-2 py-1 text-xs rounded-full bg-blue-900/20 text-blue-400 border border-blue-900/30"
+                        className="px-2 py-1 text-xs rounded-full bg-purple-900/20 text-purple-400 border border-purple-900/30"
                       >
                         {tag}
                       </span>
@@ -115,14 +115,14 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-900 text-white font-medium hover:bg-blue-800 transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-900 text-white font-medium hover:bg-purple-800 transition-colors"
                     >
                       <Github className="w-4 h-4" />
                       <span>View Code</span>
                     </a>
                     <Link
                       to={`/projects/${index}`}
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg border border-blue-500 text-blue-400 font-medium hover:bg-blue-900/10 transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg border border-purple-500 text-purple-400 font-medium hover:bg-purple-900/10 transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
                       <span>Details</span>

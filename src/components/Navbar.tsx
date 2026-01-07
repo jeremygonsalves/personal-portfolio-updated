@@ -17,12 +17,12 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-blue-900/90 backdrop-blur-sm' : 'bg-transparent'
+      scrolled ? 'bg-purple-900/90 backdrop-blur-sm' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <Database className="h-8 w-8 text-blue-500" />
+            <Database className="h-8 w-8 text-purple-500" />
             <span className="font-bold text-xl">Portfolio</span>
           </Link>
           
@@ -32,8 +32,8 @@ const Navbar = () => {
                 to="/" 
                 className={`px-4 py-2 rounded-lg transition-all duration-300 backdrop-blur-sm border ${
                   location.pathname === '/' 
-                    ? 'bg-blue-600/80 text-white border-blue-500 shadow-lg' 
-                    : 'bg-black/20 text-white border-white/30 hover:bg-blue-600/40 hover:border-blue-400 hover:shadow-md'
+                    ? 'bg-purple-600/80 text-white border-purple-500 shadow-lg' 
+                    : 'bg-black/20 text-white border-white/30 hover:bg-purple-600/40 hover:border-purple-400 hover:shadow-md'
                 }`}
               >
                 Home
@@ -42,8 +42,8 @@ const Navbar = () => {
                 to="/projects" 
                 className={`px-4 py-2 rounded-lg transition-all duration-300 backdrop-blur-sm border ${
                   location.pathname === '/projects' 
-                    ? 'bg-blue-600/80 text-white border-blue-500 shadow-lg' 
-                    : 'bg-black/20 text-white border-white/30 hover:bg-blue-600/40 hover:border-blue-400 hover:shadow-md'
+                    ? 'bg-purple-600/80 text-white border-purple-500 shadow-lg' 
+                    : 'bg-black/20 text-white border-white/30 hover:bg-purple-600/40 hover:border-purple-400 hover:shadow-md'
                 }`}
               >
                 Projects
@@ -61,13 +61,13 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       <div className={`md:hidden transition-all duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 bg-blue-900/90 backdrop-blur-sm">
+        <div className="px-2 pt-2 pb-3 space-y-1 bg-purple-900/90 backdrop-blur-sm">
           <Link 
             to="/" 
             className={`block px-4 py-3 rounded-lg transition-all duration-300 backdrop-blur-sm border ${
               location.pathname === '/' 
-                ? 'bg-blue-600/80 text-white border-blue-500' 
-                : 'bg-black/20 text-white border-white/30 hover:bg-blue-600/40 hover:border-blue-400'
+                ? 'bg-purple-600/80 text-white border-purple-500' 
+                : 'bg-black/20 text-white border-white/30 hover:bg-purple-600/40 hover:border-purple-400'
             }`}
           >
             Home
@@ -76,8 +76,8 @@ const Navbar = () => {
             to="/projects" 
             className={`block px-4 py-3 rounded-lg transition-all duration-300 backdrop-blur-sm border ${
               location.pathname === '/projects' 
-                ? 'bg-blue-600/80 text-white border-blue-500' 
-                : 'bg-black/20 text-white border-white/30 hover:bg-blue-600/40 hover:border-blue-400'
+                ? 'bg-purple-600/80 text-white border-purple-500' 
+                : 'bg-black/20 text-white border-white/30 hover:bg-purple-600/40 hover:border-purple-400'
             }`}
           >
             Projects

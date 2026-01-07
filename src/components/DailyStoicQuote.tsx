@@ -67,22 +67,22 @@ const DailyStoicQuote = () => {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="flex flex-col items-center text-center">
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-            <Quote className="w-6 h-6 text-blue-600" />
+            <Quote className="w-6 h-6 text-purple-600" />
             Daily Stoic Wisdom
           </h2>
           
-          <div className="bg-black/10 backdrop-blur-sm p-8 rounded-lg border border-blue-800/30 mb-8 max-w-2xl">
+          <div className="bg-black/10 backdrop-blur-sm p-8 rounded-lg border border-purple-800/30 mb-8 max-w-2xl">
             <blockquote className="text-xl md:text-2xl text-white mb-4 italic min-h-[80px]">
               "{quote.text}"
             </blockquote>
-            <cite className="text-blue-500 font-medium not-italic block">
+            <cite className="text-purple-500 font-medium not-italic block">
               — {quote.author}
             </cite>
           </div>
 
           <button
             onClick={generateNewQuote}
-            className="flex items-center gap-2 px-6 py-3 bg-blue-900/30 hover:bg-blue-800/40 text-white rounded-lg transition-all duration-300 backdrop-blur-sm border border-blue-700/30"
+            className="flex items-center gap-2 px-6 py-3 bg-purple-900/30 hover:bg-purple-800/40 text-white rounded-lg transition-all duration-300 backdrop-blur-sm border border-purple-700/30"
           >
             <RefreshCw className={`w-5 h-5 ${isRotating ? 'animate-spin' : ''}`} />
             New Quote

@@ -9,7 +9,7 @@ const Home = () => {
   const [showSlackContact, setShowSlackContact] = useState(false);
 
   const skills = [
-    { icon: <Database className="w-8 h-8" />, name: "Data Science", description: "Expert in SQL & Python" },
+    { icon: <Database className="w-8 h-8" />, name: "Data Engineering", description: "Expert in SQL & Python" },
     { icon: <BarChart2 className="w-8 h-8" />, name: "Business Intelligence", description: "Dashboard Design" },
     { icon: <LineChart className="w-8 h-8" />, name: "Machine Learning", description: "Predictive Analytics" }
   ];
@@ -37,7 +37,7 @@ const Home = () => {
               <h1 className="text-4xl md:text-6xl font-bold mb-8">
                 Welcome
               </h1>
-              <p className="text-xl md:text-2xl text-blue-400 mb-16">
+              <p className="text-xl md:text-2xl text-purple-400 mb-16">
                 What brings you here today?
               </p>
 
@@ -45,19 +45,19 @@ const Home = () => {
                 {/* Personal Profile Option */}
                 <button
                   onClick={handleViewProfile}
-                  className="group relative bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm p-8 md:p-12 rounded-2xl border-2 border-blue-500/50 hover:border-blue-400 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/50"
+                  className="group relative bg-gradient-to-br from-purple-900/60 to-purple-900/60 backdrop-blur-sm p-8 md:p-12 rounded-2xl border-2 border-purple-500/50 hover:border-purple-400 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-purple-500/50"
                 >
                   <div className="flex flex-col items-center space-y-6">
-                    <div className="bg-blue-500/20 p-6 rounded-full">
-                      <User className="w-16 h-16 text-blue-400" />
+                    <div className="bg-purple-500/20 p-6 rounded-full">
+                      <User className="w-16 h-16 text-purple-400" />
                     </div>
                     <h2 className="text-2xl md:text-3xl font-bold text-white">
                       View Personal Profile
                     </h2>
                     <p className="text-gray-300 text-lg">
-                      Learn about my background, skills, and experience in Data Science & Business Intelligence
+                      Learn about my background, skills, and experience in Data Engineering & Business Intelligence
                     </p>
-                    <div className="flex items-center space-x-2 text-blue-400 group-hover:text-blue-300 transition-colors">
+                    <div className="flex items-center space-x-2 text-purple-400 group-hover:text-purple-300 transition-colors">
                       <span className="font-semibold">Explore My Work</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                     </div>
@@ -103,7 +103,7 @@ const Home = () => {
                   setShowChoice(true);
                   setShowSlackContact(false);
                 }}
-                className="mb-8 text-blue-400 hover:text-blue-300 transition-colors flex items-center space-x-2"
+                className="mb-8 text-purple-400 hover:text-purple-300 transition-colors flex items-center space-x-2"
               >
                 <ArrowRight className="w-5 h-5 rotate-180" />
                 <span>Back to Options</span>
@@ -219,7 +219,7 @@ const Home = () => {
                 onClick={() => {
                   setShowChoice(true);
                 }}
-                className="fixed top-24 left-4 md:left-8 z-30 text-blue-400 hover:text-blue-300 transition-colors flex items-center space-x-2 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-blue-500/50"
+                className="fixed top-24 left-4 md:left-8 z-30 text-purple-400 hover:text-purple-300 transition-colors flex items-center space-x-2 bg-black/60 backdrop-blur-sm px-4 py-2 rounded-lg border border-purple-500/50"
               >
                 <ArrowRight className="w-5 h-5 rotate-180" />
                 <span>Back to Options</span>
@@ -229,7 +229,7 @@ const Home = () => {
         <div className="min-h-screen flex flex-col justify-center items-center px-4 text-white">
           <div className="max-w-4xl w-full text-center space-y-6 px-4">
             <div className="mb-8">
-              <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-900 shadow-xl">
+              <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-purple-900 shadow-xl">
                 <img
                   src="/profile.jpg"
                   alt="Jeremy Gonsalves"
@@ -239,8 +239,8 @@ const Home = () => {
               <h1 className="text-3xl md:text-5xl font-bold mb-4">
                 Jeremy Gonsalves
               </h1>
-              <h2 className="text-xl md:text-3xl text-blue-500">
-                Data Science & Business Intelligence
+              <h2 className="text-xl md:text-3xl text-purple-500">
+                Data Engineering & Business Intelligence
               </h2>
             </div>
             
@@ -252,9 +252,9 @@ const Home = () => {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="bg-black/30 backdrop-blur-sm p-6 rounded-lg w-full md:w-64 transform hover:scale-105 transition-transform duration-300 border border-blue-900/30"
+                  className="bg-black/30 backdrop-blur-sm p-6 rounded-lg w-full md:w-64 transform hover:scale-105 transition-transform duration-300 border border-purple-900/30"
                 >
-                  <div className="flex justify-center mb-4 text-blue-500">
+                  <div className="flex justify-center mb-4 text-purple-500">
                     {skill.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-white">{skill.name}</h3>
@@ -266,10 +266,10 @@ const Home = () => {
             <div className="mt-12 flex justify-center space-x-6">
               <a 
                 href="mailto:jeremygonsalves98@gmail.com" 
-                className="group relative text-white hover:text-blue-500 transition-colors"
+                className="group relative text-white hover:text-purple-500 transition-colors"
               >
                 <Mail className="w-6 h-6 md:w-8 md:h-8" />
-                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                   Send Email
                 </span>
               </a>
@@ -277,10 +277,10 @@ const Home = () => {
                 href="https://github.com/jeremygonsalves" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="group relative text-white hover:text-blue-500 transition-colors"
+                className="group relative text-white hover:text-purple-500 transition-colors"
               >
                 <Github className="w-6 h-6 md:w-8 md:h-8" />
-                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                   View GitHub
                 </span>
               </a>
@@ -288,10 +288,10 @@ const Home = () => {
                 href="https://www.linkedin.com/in/jeremy-gonsalves/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="group relative text-white hover:text-blue-500 transition-colors"
+                className="group relative text-white hover:text-purple-500 transition-colors"
               >
                 <Linkedin className="w-6 h-6 md:w-8 md:h-8" />
-                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                   View LinkedIn
                 </span>
               </a>
@@ -299,10 +299,10 @@ const Home = () => {
                 href="https://docs.google.com/document/d/1oztdUkk0JvH0Ej61mU3cK6F6rPaLKQ3p/edit" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="group relative text-white hover:text-blue-500 transition-colors"
+                className="group relative text-white hover:text-purple-500 transition-colors"
               >
                 <FileText className="w-6 h-6 md:w-8 md:h-8" />
-                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                <span className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                   View Resume
                 </span>
               </a>
@@ -327,9 +327,9 @@ const Home = () => {
                     </div>
                     <div className="desc">
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
-                        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">Python</span>
-                        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">TensorFlow</span>
-                        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">PyTorch</span>
+                        <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded">Python</span>
+                        <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded">TensorFlow</span>
+                        <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded">PyTorch</span>
                         <span className="bg-green-100 text-green-800 px-2 py-1 rounded">SQL</span>
                         <span className="bg-green-100 text-green-800 px-2 py-1 rounded">Power BI</span>
                         <span className="bg-green-100 text-green-800 px-2 py-1 rounded">Excel</span>
@@ -432,7 +432,7 @@ const Home = () => {
               {/* Contact Info Card */}
               <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                  <Mail className="w-5 h-5 mr-2 text-blue-600" />
+                  <Mail className="w-5 h-5 mr-2 text-purple-600" />
                   Contact Information
                 </h3>
                 <div className="space-y-2 text-gray-700">
@@ -447,7 +447,7 @@ const Home = () => {
               {/* Current Role Card */}
               <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                  <Briefcase className="w-5 h-5 mr-2 text-blue-600" />
+                  <Briefcase className="w-5 h-5 mr-2 text-purple-600" />
                   Current Role
                 </h3>
                 <div className="space-y-2 text-gray-700">
@@ -464,7 +464,7 @@ const Home = () => {
               {/* Education Card */}
               <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                  <GraduationCap className="w-5 h-5 mr-2 text-blue-600" />
+                  <GraduationCap className="w-5 h-5 mr-2 text-purple-600" />
                   Education
                 </h3>
                 <div className="space-y-2 text-gray-700">
@@ -479,7 +479,7 @@ const Home = () => {
               {/* Key Skills Card */}
               <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                  <Database className="w-5 h-5 mr-2 text-blue-600" />
+                  <Database className="w-5 h-5 mr-2 text-purple-600" />
                   Key Skills
                 </h3>
                 <div className="space-y-2 text-gray-700">
@@ -494,7 +494,7 @@ const Home = () => {
               {/* Notable Projects Card */}
               <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                  <Award className="w-5 h-5 mr-2 text-blue-600" />
+                  <Award className="w-5 h-5 mr-2 text-purple-600" />
                   Notable Projects
                 </h3>
                 <div className="space-y-3 text-gray-700">
@@ -516,7 +516,7 @@ const Home = () => {
               {/* Achievements Card */}
               <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-xl p-6">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                  <Award className="w-5 h-5 mr-2 text-blue-600" />
+                  <Award className="w-5 h-5 mr-2 text-purple-600" />
                   Key Achievements
                 </h3>
                 <div className="space-y-2 text-gray-700">
@@ -535,7 +535,7 @@ const Home = () => {
                 href="https://docs.google.com/document/d/1oztdUkk0JvH0Ej61mU3cK6F6rPaLKQ3p/edit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 text-lg"
+                className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 text-lg"
               >
                 <Download className="w-5 h-5" />
                 View Full Resume
