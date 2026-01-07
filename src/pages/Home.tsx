@@ -296,7 +296,7 @@ const Home = () => {
                 </span>
               </a>
               <a 
-                href="https://docs.google.com/document/d/1oztdUkk0JvH0Ej61mU3cK6F6rPaLKQ3p/edit" 
+                href="/Jeremy_Gonsalves_Resume.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="group relative text-white hover:text-purple-500 transition-colors"
@@ -410,23 +410,9 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Resume Preview Section */}
+        {/* Resume Summary Section */}
         <div className="py-16 bg-transparent relative z-10">
           <div className="container mx-auto px-4 max-w-6xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">Resume Preview</h2>
-            
-            {/* Embedded Google Docs Resume */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-2xl p-4 md:p-8 max-w-5xl mx-auto mb-8">
-              <div className="aspect-[8.5/11] w-full">
-                <iframe
-                  src="https://docs.google.com/document/d/1oztdUkk0JvH0Ej61mU3cK6F6rPaLKQ3p/edit?embedded=true"
-                  className="w-full h-full rounded-lg border-0"
-                  title="Jeremy Gonsalves Resume"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-
             {/* Resume Summary Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {/* Contact Info Card */}
@@ -451,7 +437,7 @@ const Home = () => {
                   Current Role
                 </h3>
                 <div className="space-y-2 text-gray-700">
-                  <p><strong>Position:</strong> Business Intelligence Associate</p>
+                  <p><strong>Position:</strong> Business Intelligence Analyst</p>
                   <p><strong>Company:</strong> TD Bank</p>
                   <p><strong>Location:</strong> Toronto, ON</p>
                   <p><strong>Duration:</strong> June 2025 - Present</p>
@@ -532,7 +518,7 @@ const Home = () => {
             {/* Download Button */}
             <div className="text-center mt-12">
               <a
-                href="https://docs.google.com/document/d/1oztdUkk0JvH0Ej61mU3cK6F6rPaLKQ3p/edit"
+                href="/Jeremy_Gonsalves_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 text-lg"
